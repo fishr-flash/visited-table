@@ -26,7 +26,7 @@ describe('users page', () => {
         const allTimeMs = 910586000;
         expect(allTimeMs + getMs(time)).toBe(1005988000)
 
-    })
+    });
 
     it('getStringTime', function () {
 
@@ -45,5 +45,12 @@ describe('users page', () => {
         })
 
 
-    })
+    });
+
+    it('how time of duration in 1415000', function () {
+
+        const allTimeMs = 1415000;
+
+        expect(getTimeItems(allTimeMs)).toStrictEqual({"days": "0", "hours": "0", "minutes": "24", "seconds": 35});
+    });
 });
