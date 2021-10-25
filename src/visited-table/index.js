@@ -3,93 +3,11 @@ import {extractData} from "./utils";
 import './style.scss';
 import {fullClone} from "../utils";
 import data from "./data";
-import fish from "./fish";
 
 
 export default function VisitedTable() {
 
-    //extractData(data);
-
-    /*const fish = {
-        allTime: 0,
-        groups: [
-            {
-                name: "[Group 1]",
-                duration_in: 6233458000,
-                expand: false,
-                days: [
-                    {
-                        value: 1589068800000,
-                        duration_in: 1048890000,
-                        expand: false,
-                        units: [
-                            {
-                                name: "Nils Boehm DVM_754",
-                                expand: false,
-                                zones: [
-                                    {
-                                        zone_name: "Lastochkino",
-                                        time_begin: "2020-05-10 07:51:02",
-                                        time_end: "2020-05-11 03:49:30",
-                                        duration_in: "19:58:28"
-                                    }
-                                ],
-                                duration_in: 71908000
-                            },{
-                                name: "Nils Boehm DVM_754",
-                                expand: false,
-                                zones: [
-                                    {
-                                        zone_name: "Lastochkino",
-                                        time_begin: "2020-05-10 07:51:02",
-                                        time_end: "2020-05-11 03:49:30",
-                                        duration_in: "19:58:28"
-                                    }
-                                ],
-                                duration_in: 71908000
-                            },{
-                                name: "Nils Boehm DVM_754",
-                                expand: false,
-                                zones: [
-                                    {
-                                        zone_name: "Lastochkino",
-                                        time_begin: "2020-05-10 07:51:02",
-                                        time_end: "2020-05-11 03:49:30",
-                                        duration_in: "19:58:28"
-                                    }
-                                ],
-                                duration_in: 71908000
-                            },
-                        ]
-                    },{
-                        value: 1589068800000,
-                        duration_in: 1048890000,
-                        expand: false,
-                        units: [
-                            {
-                                name: "Nils Boehm DVM_754",
-                                expand: false,
-                                zones: [
-                                    {
-                                        zone_name: "Lastochkino",
-                                        time_begin: "2020-05-10 07:51:02",
-                                        time_end: "2020-05-11 03:49:30",
-                                        duration_in: "19:58:28"
-                                    }
-                                ],
-                                duration_in: 71908000
-                            },
-                        ]
-                    },
-                ]
-            },
-        ]
-    };*/
-
-
-    // const [content, setContent] = useState(fish);
     const [content, setContent] = useState(extractData(data));
-    // const [content, setContent] = useState(extractData(fish));
 
     const onClick = (indexes) => {
         const {groups} = fullClone(content);

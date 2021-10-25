@@ -35,7 +35,6 @@ const getZero = (num) => num.length < 2 ? `0${num}` : num ;
 
 export const extractData = (data) => {
 
-    const startDate = new Date();
     const groups = [];
     let allTimeMs = 0;
     data.forEach((unit) => {
@@ -94,22 +93,6 @@ export const extractData = (data) => {
 
 
     });
-
-    /////////////////////////////CONSOLE/////////////////////////////////////
-    ///TODO: Console log in the code "UTILS_JS" line 32
-    if ( process && process.env.NODE_ENV === 'development') {
-        console.group('Console log in the code "UTILS_JS" line 32');
-        console.info('startDate - new Date(): ', startDate - new Date());
-        console.info('this: ', this);
-        console.info('allTimeMs: ', allTimeMs);
-        console.info('getTimeItems( allTimeMs): ', getTimeItems(allTimeMs));
-        console.info('groups: ', groups);
-        console.info('JSON.stringify(groups)): ', JSON.stringify(groups));
-        //console.table( this );
-        console.groupEnd();
-    }
-    /////////////////////////////END CONSOLE/////////////////////////////////
-
     groups.forEach((group)=>{
         group.days.sort((a,b)=>b.value-a.value);
         group.duration_in = getTimeItems( group.duration_in);
