@@ -97,7 +97,7 @@ export const extractData = (data) => {
 
     /////////////////////////////CONSOLE/////////////////////////////////////
     ///TODO: Console log in the code "UTILS_JS" line 32
-    if (process && process.env.NODE_ENV === 'development') {
+    if ( process && process.env.NODE_ENV === 'development') {
         console.group('Console log in the code "UTILS_JS" line 32');
         console.info('startDate - new Date(): ', startDate - new Date());
         console.info('this: ', this);

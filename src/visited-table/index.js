@@ -3,6 +3,7 @@ import {extractData} from "./utils";
 import './style.scss';
 import {fullClone} from "../utils";
 import data from "./data";
+import fish from "./fish";
 
 
 export default function VisitedTable() {
@@ -107,26 +108,29 @@ export default function VisitedTable() {
             return (
             <>
                 <tr key={iGroup.toString()} onClick={()=>onClick([iGroup])}>
-                    <th>{group.name}</th>
-                    <td>{group.duration_in}</td>
+                    <th key={iGroup.toString() + 1}>{group.name}</th>
+                    <td key={iGroup.toString() + 2}>{group.duration_in}</td>
 
                 </tr>
                 {group.expand && group.days.map((day, iDay) => (
                     <>
-                    <tr onClick={()=>onClick([iGroup, iDay])}>
+                    <tr className={'visited-table__tr-day'} key={iDay.toString()} onClick={()=>onClick([iGroup, iDay])}>
                         <th>{day.name}</th>
                         <td>{day.duration_in}</td>
                     </tr>
                     {day.expand && day.units.map((unit, iUnit)=>(
                         <>
-                            <tr onClick={()=>onClick([iGroup, iDay, iUnit])}>
+                            <tr
+                                className={'visited-table__tr-unit'}
+                                key={iUnit.toString()}
+                                onClick={()=>onClick([iGroup, iDay, iUnit])}>
                                 <th>{unit.name}</th>
                                 <td>{unit.duration_in}</td>
                             </tr>
-                            {unit.expand && <tr>
+                            {unit.expand && <tr key={iUnit.toString() + 1} >
                                 <td colSpan={2}>
-                                    <table>
-                                        <thead>
+                                    <table key={iUnit.toString() + 1}>
+                                        <thead key={iUnit.toString()}>
                                         <tr>
                                             <th>
                                                 Zone name
@@ -142,13 +146,13 @@ export default function VisitedTable() {
                                             </th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        {unit.zones.map((zone)=>(
-                                            <tr>
-                                                <th>{zone.zone_name}</th>
-                                                <td>{zone.time_begin}</td>
-                                                <td>{zone.time_end}</td>
-                                                <td>{zone.duration_in}</td>
+                                        <tbody key={iUnit.toString() + 2}>
+                                        {unit.zones.map((zone, iZone)=>(
+                                            <tr key={iZone.toString()}>
+                                                <th key={iZone.toString() + 1}>{zone.zone_name}</th>
+                                                <td key={iZone.toString() + 2}>{zone.time_begin}</td>
+                                                <td key={iZone.toString() + 3}>{zone.time_end}</td>
+                                                <td key={iZone.toString() + 4}>{zone.duration_in}</td>
                                             </tr>
                                         ))}
                                         </tbody>
@@ -164,123 +168,23 @@ export default function VisitedTable() {
     });
 
     return (
-        <div className={'wrapper'}>
-            <table className={'visited-table'}>
+        <div key={'wrapper'} className={'wrapper'}>
+            <table className={'visited-table'} rules={'rows'} border={'1'}>
                 <caption>Visited table</caption>
                 <thead>
-                    <tr>
+                    <tr key={'thead'}>
                         <th>Subject</th>
                         <th>Duration in</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr key={'content'}>
                         <th>All time</th>
                         <td>{content.all}</td>
                     </tr>
                     {content && rowsGroup(content)}
                 </tbody>
             </table>
-            {/*<table className={'visited-table'}>
-                <caption>Visited table</caption>
-                <tbody>
-                <tr>
-                    <th scope={'row'}>
-                        Всего вермени
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(7972942000))}
-                    </td>
-                </tr>
-                <tr onClick={() => onClick()}>
-                    <th scope={'row'}>
-                        [Group 1]
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(6233458000))}
-                    </td>                </tr>
-                <tr>
-                    <th>
-                        {new Date(1589068800000).toString()}
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(1048890000))}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {new Date(1588982400000).toString()}
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(1274486000))}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Nils Boehm DVM_754
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(71908000))}
-                    </td>
-                </tr>
-                <tr>
-                    <td colSpan={2}>
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>
-                                    Zone name
-                                </th>
-                                <th>
-                                    Time begin
-                                </th>
-                                <th>
-                                    Time end
-                                </th>
-                                <th>
-                                    Duration in
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th>
-                                    Lastochkino
-                                </th>
-                                <td>
-                                    2020-05-10 07:51:02
-                                </td>
-                                <td>
-                                    2020-05-11 03:49:30
-                                </td>
-                                <td>
-                                    19:58:28
-                                </td>
-                            </tr>
-                            </tbody>
-
-
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        {new Date(1589155200000).toString()}
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(1015048000))}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope={'row'}>
-                        [Group_Maintaner]
-                    </th>
-                    <td>
-                        {JSON.stringify(getTimeItems(1739484000))}
-                    </td>
-                </tr>
-                </tbody>
-            </table>*/}
         </div>
     );
 }

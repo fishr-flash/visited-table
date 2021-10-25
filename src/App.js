@@ -3,7 +3,7 @@ import VisitedTable from "./visited-table";
 
 function App() {
   return (
-    <div className="App">
+    <div key={'App'} className="App">
         <VisitedTable />
     </div>
   );
