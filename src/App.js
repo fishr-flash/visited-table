@@ -1,12 +1,10 @@
-import './App.css';
 import VisitedTable from "./visited-table";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <VisitedTable/>
-      </header>
+        <VisitedTable />
     </div>
   );
 }

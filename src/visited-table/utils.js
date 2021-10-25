@@ -91,8 +91,11 @@ export const extractData = (data) => {
             un.duration_in += ms;
             allTimeMs += ms;
 
+
         })
-    })
+
+
+    });
 
     /////////////////////////////CONSOLE/////////////////////////////////////
     ///TODO: Console log in the code "UTILS_JS" line 32
@@ -109,5 +112,9 @@ export const extractData = (data) => {
     }
     /////////////////////////////END CONSOLE/////////////////////////////////
 
+    return {
+        allTimeMs,
+        groups,
+    }
 };
 

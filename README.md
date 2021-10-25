@@ -1,12 +1,5 @@
-Отправляю вам ссылку на тестовое задание для компании Visitech
-<уду ждать от вас фидбек сколько времени потребуется на его решение.
- 
-https://github.com/jichanghir/Visitech-test-layout
 
-##[Условия](https://github.com/jichanghir/Visitech-test-layout)
-##[Таблица](https://docs.google.com/spreadsheets/d/1bE3ClKMVP3vZldbBLsMBjE0CMnxfS2slVZvsciBOBmU/edit#gid=0)
-##[Данные в JSON](https://raw.githubusercontent.com/jichanghir/Visitech-test-layout/master/data.json)
-
+# [Задание](https://github.com/jichanghir/Visitech-test-layout)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

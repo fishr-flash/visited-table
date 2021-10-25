@@ -1,3 +1,41 @@
-body{
-  background-color: black;
+.wrapper{
+  background-color: rgba(0, 0, 0, 0.23);
+  width: 100%;
 }
+
+.visited-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e8e8e8;
+  color: #e8e8e8;
+  caption{
+    margin-bottom: 20px;
+  }
+
+  thead{
+    th{
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  tbody {
+    th, td {
+      padding: 20px;
+      text-align: left;
+    }
+
+    tr:nth-child(odd){
+      background-color: #353535;
+    }
+
+    table {
+      width: 100%;
+    }
+  }
+
+
+}
+
+
+

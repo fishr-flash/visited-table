@@ -1,0 +1,1 @@
+export const fullClone = (data) => JSON.parse(JSON.stringify(data));
