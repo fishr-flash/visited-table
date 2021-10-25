@@ -1,5 +1,5 @@
-import VisitedTable from "./visited-table";
 import React from "react";
+import VisitedTable from "./visited-table";
 
 function App() {
   return (

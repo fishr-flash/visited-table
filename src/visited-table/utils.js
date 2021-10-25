@@ -21,22 +21,17 @@ export const getTimeItems = (ms) => {
     const sec = 1000;
     const mn = sec * 60;
     const hour = mn * 60;
-    const day = hour * 24;
+    // const day = hour * 24;
+    // const days = Math.floor(ms / day);
+    const hours = Math.floor(ms / hour);
+    const minutes = Math.floor((ms % hour) / mn);
+    const seconds = ((ms % hour) % mn) / sec;
 
-    const days = (ms / day).toFixed(0);
-    const hours = ((ms % day) / hour).toFixed(0);
-    const minutes = (((ms % day) % hour) / mn).toFixed(0);
-    const seconds = (((ms % day) % hour) % mn) / sec;
-
-    return {
-        days,
-        hours,
-        minutes,
-        seconds
-    }
+    return `${getZero(hours)}h ${getZero(minutes)}min ${seconds}sec`;
 
 };
 
+const getZero = (num) => num.length < 2 ? `0${num}` : num ;
 
 export const extractData = (data) => {
 
@@ -51,6 +46,7 @@ export const extractData = (data) => {
                 name: groupName,
                 duration_in: 0,
                 days: [],
+                expand: false,
             };
             groups.push(group)
         }
@@ -64,7 +60,8 @@ export const extractData = (data) => {
                 day = {
                     value: timeBegin,
                     duration_in: 0,
-                    units: []
+                    units: [],
+                    expand: false,
                 };
                 group.days.push(day);
             }
@@ -75,7 +72,8 @@ export const extractData = (data) => {
                 un = {
                     name: unitName,
                     zones:[],
-                    duration_in: 0
+                    duration_in: 0,
+                    expand: false,
                 };
 
                 day.units.push(un);
@@ -112,8 +110,22 @@ export const extractData = (data) => {
     }
     /////////////////////////////END CONSOLE/////////////////////////////////
 
+    groups.forEach((group)=>{
+        group.days.sort((a,b)=>b.value-a.value);
+        group.duration_in = getTimeItems( group.duration_in);
+        group.days.forEach((day)=>{
+            const d = new Date( day.value );
+            // day.name = `${d.getFullYear()}.${d.getUTCMonth()}.${d.getUTCDate()}`;
+            day.name = `${Intl.DateTimeFormat().format(d)}`;
+            // day.duration_in = `${Intl.DateTimeFormat('En-Us', { day: 'numeric', hour:'2-digit', minute:'numeric', second:'numeric'}).format(new Date(day.duration_in))}`;
+            day.duration_in = getTimeItems( day.duration_in );
+            day.units.forEach((unit) => {
+                unit.duration_in = getTimeItems( unit.duration_in );
+            })
+        })
+    });
     return {
-        allTimeMs,
+        all: getTimeItems(allTimeMs ),
         groups,
     }
 };
