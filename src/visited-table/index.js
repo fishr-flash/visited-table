@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {Fragment, useState} from 'react';
 import {extractData} from "./utils";
 import './style.scss';
 import {fullClone} from "../utils";
@@ -24,20 +24,20 @@ export default function VisitedTable() {
 
     const rowsGroup = ( dt ) => dt.groups.map((group, iGroup) => {
             return (
-            <>
+            <Fragment key={iGroup.toString()}>
                 <tr key={iGroup.toString()} onClick={()=>onClick([iGroup])}>
                     <th key={iGroup.toString() + 1}>{group.name}</th>
                     <td key={iGroup.toString() + 2}>{group.duration_in}</td>
 
                 </tr>
                 {group.expand && group.days.map((day, iDay) => (
-                    <>
+                    <Fragment key={iDay.toString()}>
                     <tr className={'visited-table__tr-day'} key={iDay.toString()} onClick={()=>onClick([iGroup, iDay])}>
                         <th>{day.name}</th>
                         <td>{day.duration_in}</td>
                     </tr>
                     {day.expand && day.units.map((unit, iUnit)=>(
-                        <>
+                        <Fragment key={iUnit.toString()}>
                             <tr
                                 className={'visited-table__tr-unit'}
                                 key={iUnit.toString()}
@@ -77,11 +77,11 @@ export default function VisitedTable() {
                                     </table>
                                 </td>
                             </tr>}
-                        </>
+                        </Fragment>
                     ))}
-                    </>
+                    </Fragment>
                 ))}
-            </>
+            </Fragment>
             )
     });
 

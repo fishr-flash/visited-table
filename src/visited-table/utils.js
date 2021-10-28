@@ -3,9 +3,9 @@ export const getMs = (timeString) => {
     const times = timeString.split('days');
     const timePart = times[times.length - 1].trim();
     const dateString = '1970-01-01T';
-    const utfPostfix = 'z';
+    const utcPostfix = 'z';
     const time = timePart.length === 7 ? `0${timePart}` : timePart;
-    const date = new Date(`${dateString}${time}${utfPostfix}`);
+    const date = new Date(`${dateString}${time}${utcPostfix}`);
 
     if (times.length > 1) {
 
@@ -98,9 +98,7 @@ export const extractData = (data) => {
         group.duration_in = getTimeItems( group.duration_in);
         group.days.forEach((day)=>{
             const d = new Date( day.value );
-            // day.name = `${d.getFullYear()}.${d.getUTCMonth()}.${d.getUTCDate()}`;
             day.name = `${Intl.DateTimeFormat().format(d)}`;
-            // day.duration_in = `${Intl.DateTimeFormat('En-Us', { day: 'numeric', hour:'2-digit', minute:'numeric', second:'numeric'}).format(new Date(day.duration_in))}`;
             day.duration_in = getTimeItems( day.duration_in );
             day.units.forEach((unit) => {
                 unit.duration_in = getTimeItems( unit.duration_in );
