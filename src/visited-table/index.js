@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import {extractData} from "./utils";
+import {extractData, getUniqueKey} from "./utils";
 import './style.scss';
 import {fullClone} from "../utils";
 import data from "./data";
@@ -23,32 +23,38 @@ export default function VisitedTable() {
     };
 
     const rowsGroup = ( dt ) => dt.groups.map((group, iGroup) => {
+        const getUKey = getUniqueKey();
+        const getGroupUKey = getUniqueKey();
+        const getDayUKey = getUniqueKey();
+        const getUnitUKey = getUniqueKey();
+        const getZoneUKey = getUniqueKey();
+
             return (
-            <Fragment key={iGroup.toString()}>
-                <tr key={iGroup.toString()} onClick={()=>onClick([iGroup])}>
-                    <th key={iGroup.toString() + 1}>{group.name}</th>
-                    <td key={iGroup.toString() + 2}>{group.duration_in}</td>
+            <Fragment key={getGroupUKey()}>
+                <tr key={getGroupUKey()} onClick={()=>onClick([iGroup])}>
+                    <th key={getGroupUKey()}>{group.name}</th>
+                    <td key={getGroupUKey()}>{group.duration_in}</td>
 
                 </tr>
                 {group.expand && group.days.map((day, iDay) => (
-                    <Fragment key={iDay.toString()}>
-                    <tr className={'visited-table__tr-day'} key={iDay.toString()} onClick={()=>onClick([iGroup, iDay])}>
+                    <Fragment key={getDayUKey()}>
+                    <tr className={'visited-table__tr-day'} key={getDayUKey()} onClick={()=>onClick([iGroup, iDay])}>
                         <th>{day.name}</th>
                         <td>{day.duration_in}</td>
                     </tr>
                     {day.expand && day.units.map((unit, iUnit)=>(
-                        <Fragment key={iUnit.toString()}>
+                        <Fragment key={getUnitUKey()}>
                             <tr
                                 className={'visited-table__tr-unit'}
-                                key={iUnit.toString()}
+                                key={getUnitUKey()}
                                 onClick={()=>onClick([iGroup, iDay, iUnit])}>
                                 <th>{unit.name}</th>
                                 <td>{unit.duration_in}</td>
                             </tr>
-                            {unit.expand && <tr key={iUnit.toString() + 1} >
+                            {unit.expand && <tr key={getZoneUKey()} >
                                 <td colSpan={2}>
-                                    <table key={iUnit.toString() + 1}>
-                                        <thead key={iUnit.toString()}>
+                                    <table key={getZoneUKey()}>
+                                        <thead>
                                         <tr>
                                             <th>
                                                 Zone name
@@ -64,13 +70,13 @@ export default function VisitedTable() {
                                             </th>
                                         </tr>
                                         </thead>
-                                        <tbody key={iUnit.toString() + 2}>
+                                        <tbody>
                                         {unit.zones.map((zone, iZone)=>(
-                                            <tr key={iZone.toString()}>
-                                                <th key={iZone.toString() + 1}>{zone.zone_name}</th>
-                                                <td key={iZone.toString() + 2}>{zone.time_begin}</td>
-                                                <td key={iZone.toString() + 3}>{zone.time_end}</td>
-                                                <td key={iZone.toString() + 4}>{zone.duration_in}</td>
+                                            <tr key={getZoneUKey()}>
+                                                <th key={getZoneUKey()}>{zone.zone_name}</th>
+                                                <td key={getZoneUKey()}>{zone.time_begin}</td>
+                                                <td key={getZoneUKey()}>{zone.time_end}</td>
+                                                <td key={getZoneUKey()}>{zone.duration_in}</td>
                                             </tr>
                                         ))}
                                         </tbody>

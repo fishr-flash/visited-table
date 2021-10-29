@@ -1,4 +1,4 @@
-import {getMs, getTimeItems} from "../utils";
+import {getMs, getTimeItems, getUniqueKey} from "../utils";
 
 describe('users page', () => {
     it('.setItem, choosing a different roleId', function () {
@@ -52,5 +52,22 @@ describe('users page', () => {
         const allTimeMs = 1415000;
 
         expect(getTimeItems(allTimeMs)).toStrictEqual({"days": "0", "hours": "0", "minutes": "24", "seconds": 35});
+    });
+
+    it('getUniqueKey', function () {
+
+        const getUKey = getUniqueKey();
+        /////////////////////////////CONSOLE/////////////////////////////////////
+            ///TODO: Console log in the code "INDEX_TEST_JS" line 60
+            if( true ){
+                console.group( 'Console log in the code "INDEX_TEST_JS" line 60' );
+                console.info( 'getUKey(): ', getUKey() );
+                console.info( 'getUKey(): ', getUKey() );
+                console.info( 'getUKey(): ', getUKey() );
+                console.info( 'this: ', this );
+                //console.table( this );
+                console.groupEnd();
+            }
+        /////////////////////////////END CONSOLE/////////////////////////////////
     });
 });

@@ -111,3 +111,7 @@ export const extractData = (data) => {
     }
 };
 
+export function getUniqueKey(){
+    let key = 0;
+    return ()=>`${key++}`;
+}
