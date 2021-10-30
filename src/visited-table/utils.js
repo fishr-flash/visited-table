@@ -35,6 +35,7 @@ const getZero = (num) => num.length < 2 ? `0${num}` : num ;
 
 export const extractData = (data) => {
 
+    const defaultExpand = true;
     const groups = [];
     let allTimeMs = 0;
     data.forEach((unit) => {
@@ -45,7 +46,7 @@ export const extractData = (data) => {
                 name: groupName,
                 duration_in: 0,
                 days: [],
-                expand: false,
+                expand: defaultExpand
             };
             groups.push(group)
         }
@@ -60,7 +61,7 @@ export const extractData = (data) => {
                     value: timeBegin,
                     duration_in: 0,
                     units: [],
-                    expand: false,
+                    expand: defaultExpand,
                 };
                 group.days.push(day);
             }
@@ -72,7 +73,7 @@ export const extractData = (data) => {
                     name: unitName,
                     zones:[],
                     duration_in: 0,
-                    expand: false,
+                    expand: defaultExpand,
                 };
 
                 day.units.push(un);
