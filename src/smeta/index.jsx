@@ -37,15 +37,17 @@ export default ()=>{
 
     excludeObject( data )
 
-
-
-
     summ *= ratio;
+
+    const hours = Math.round(summ );
+    const hoursToOne = Math.round(summ / 3 );
+    const daysToOne = Math.round(hoursToOne / 8 );
+
     return(
         <Fragment>
-            <div>{`All time: ${summ} hr`}</div>
-            <div>{`Time to one employee: ${summ / 3} hr`}</div>
-            <div>{`Days to one employee: ${( summ / 3 ) / 8 } hr`}</div>
+            <div>{`All time: ${hours} hr`}</div>
+            <div>{`Time to one employee: ${hoursToOne} hr`}</div>
+            <div>{`Days to one employee: ${daysToOne } d`}</div>
         </Fragment>
 
     )

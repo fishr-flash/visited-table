@@ -5,6 +5,11 @@ export default
       "name": "Главный экран",
       "screens": [
         {
+          name: "Авторизация",
+          duration: null,
+          comment: 'Не известна процедура'
+        },
+        {
           "name": "Супервизор",
           "jobs": [
             {
@@ -403,7 +408,7 @@ export default
               "duration": 3
             }
           ]
-        }
+        },
       ]
     }
   ]
