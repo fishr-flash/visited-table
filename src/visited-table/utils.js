@@ -35,7 +35,7 @@ const getZero = (num) => num.length < 2 ? `0${num}` : num ;
 
 export const extractData = (data) => {
 
-    const defaultExpand = true;
+    const defaultExpand = false;
     const groups = [];
     let allTimeMs = 0;
     data.forEach((unit) => {

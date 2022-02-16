@@ -4,10 +4,12 @@ import Smeta2 from "./smeta2";
 import Smeta from "./smeta";
 
 function App() {
+
   return (
     <div key={'App'} className="App">
         {/*<VisitedTable />*/}
-        <Smeta />
+        {/*<Smeta />*/}
+        <Smeta2 />
     </div>
   );
 }
