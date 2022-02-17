@@ -1,5 +1,6 @@
 export default
 {
+    "name": "Сторис",
     "stories": [
         {
             "name": "Главный экран",
