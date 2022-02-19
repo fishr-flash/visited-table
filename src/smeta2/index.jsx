@@ -49,7 +49,7 @@ export default () => {
             const clr1 = 'color: #747678';
             const clr = 'color: #72b8f5';
             console.group('%c path: "src/smeta2/index.jsx", line: "47", time: "0:34:27:182"', clr1);
-            console.info('%c content: ', clr, content);
+            console.info('%c content.expand: ', clr, content.expand);
             //console.info('this: ', this );
             //console.table( this );
             console.groupEnd();
@@ -59,9 +59,17 @@ export default () => {
             <Fragment>
                 {Object.keys(content).map((key) => {
                         const item = content[key];
-                        return Array.isArray(item) ? item.map((v) => rowsGroup(v)) :
+                        return Array.isArray(item) ?
+                            <Fragment>
+                                <tr>
+                                    <td colSpan={2}>
+                                        { item.map((v) => rowsGroup(v)) }
+                                    </td>
+                                </tr>
+                            </Fragment>
+                             :
                         key === 'name' ?  (
-                            <tr key={`${keyIndex}`} className={'visited-table__tr-unit'}>
+                            <tr key={`${keyIndex}`} className={'visited-table__tr-day'}>
                                 <th>{content.name}</th>
                                 <td>{content.subTotal ? content.subTotal : content.hours}</td>
                             </tr>
