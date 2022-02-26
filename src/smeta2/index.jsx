@@ -2,8 +2,9 @@ import React, {Fragment, useState} from "react";
 import jsonData from './data';
 import {calculateTimes} from "./utils";
 import {fullClone} from "../utils";
+import './style.scss';
 
-export const DEFAULT_EXPAND = true;
+export const DEFAULT_EXPAND = false;
 export const RATIO = 2;
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -42,47 +43,71 @@ export default () => {
 
     let keyIndex = 0;
 
-    function rowsGroup(content) {
+    function onClick(e, contentNode) {
+
+        /*const childs = e.currentTarget.parentNode.childNodes;
+        for (let i = 1; i < childs.length; i++) {
+            if( !childs[i].style.display || childs[i].style.display === 'initial'){
+                childs[i].style.display = 'none';
+            } else {
+                childs[i].style.display = 'initial';
+            }
+
+
+        }*/
+        // e.target.style.display = 'none';
+        contentNode.expand = !contentNode.expand;
         //////////////////////////CONSOLE//////////////////////////
-        /// TODO: path: "src/smeta2/index.jsx" line "47", time: "0:34:27:182"'
-        if (process && process.env.MODE_ENV !== 'production') {
+        /// TODO: path: "src/smeta2/index.jsx" line "61", time: "22:52:44:536"'
+        if( process && process.env.MODE_ENV !== 'production' ){
             const clr1 = 'color: #747678';
             const clr = 'color: #72b8f5';
-            console.group('%c path: "src/smeta2/index.jsx", line: "47", time: "0:34:27:182"', clr1);
-            console.info('%c content.expand: ', clr, content.expand);
+            console.group( '%c path: "src/smeta2/index.jsx", line: "61", time: "22:52:44:536"', clr1);
+            console.info('%c content: ', clr, content );
+            console.info('%c contentNode: ', clr, contentNode );
             //console.info('this: ', this );
             //console.table( this );
             console.groupEnd();
         }
         ////////////////////////END CONSOLE////////////////////////
+        setContent(fullClone( content ));
+    }
+
+    function rowsGroup(content) {
+
         return (
             <Fragment>
                 {Object.keys(content).map((key) => {
                         const item = content[key];
-                        return Array.isArray(item) ?
-                            <Fragment>
-                                <tr>
-                                    <td colSpan={2}>
-                                        { item.map((v) => rowsGroup(v)) }
-                                    </td>
-                                </tr>
-                            </Fragment>
-                             :
-                        key === 'name' ?  (
-                            <tr key={`${keyIndex}`} className={'visited-table__tr-day'}>
-                                <th>{content.name}</th>
-                                <td>{content.subTotal ? content.subTotal : content.hours}</td>
+                        return Array.isArray(item) && content.expand ?
+                            <tr>
+                                <td colSpan={2}>
+                                    <table style={{tableLayout: 'fixed'}} className={`visited-table ${key}`}>
+                                        <thead>
+                                        <tr>
+                                            <th className={'visited-table_caption'} colSpan={2}>{key}</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {item.map((v) => rowsGroup(v))}
+                                        </tbody>
+                                    </table>
+                                </td>
                             </tr>
-                        ): null;
+
+                            :
+                            key === 'name' ? (
+                                <tr
+                                    style={{width: '100%'}}
+                                    onClick={(e) => onClick(e, content)}
+                                    key={`${keyIndex}`}
+                                    className={'visited-table'}>
+                                    <th style={{width: 'inherit'}}>{content.name}</th>
+                                    <td style={{width: 'inherit'}}>{content.subTotal ? `~${content.subTotal}` : content.hours}</td>
+                                </tr>
+                            ) : null;
                     }
                 )}
-
-                {/*<tr key={`${keyIndex}`} className={'visited-table__tr-unit'}>
-                    <th>{content.name}</th>
-                    <td>{''}</td>
-                    <td>{content.subTotal ? content.subTotal : content.hours}</td>
-                </tr>*/}
-
             </Fragment>)
 
     }
@@ -102,10 +127,6 @@ export default () => {
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th>All time</th>
-                        <td>{content.all}</td>
-                    </tr>
                     {content && rowsGroup(content)}
                     </tbody>
                 </table>

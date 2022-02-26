@@ -8,7 +8,7 @@
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #636363;
-  color: #b2b2b2;
+  color: #898F98;
 
   caption{
     margin-bottom: 20px;
@@ -25,6 +25,7 @@
     th, td {
       padding: 5px;
       text-align: left;
+      // width: inherit;
     }
 
     tr:nth-child(even){
@@ -58,5 +59,59 @@
 
 
 }
+.stories {
+  border: 1px solid #1F2423;
+  color: #879894;
+    tr:nth-child(even){
+      background-color: #0D201B !important;
+    }
+    tr:nth-child(odd){
+      background-color: #27312E !important;
+    }
+  }
+.screens {
+  border: 1px solid #A59B8C !important;
+  color: #A59E93 !important;
+    tr:nth-child(even){
+      background-color: #383530 !important;
+    }
+    tr:nth-child(odd){
+      background-color: #4B453C !important;
+    }
+  }
+.jobs {
+  border: 1px solid #838C98;
+  color: #898F98;
+    tr:nth-child(even){
+      background-color: #202225 !important;
+    }
+    tr:nth-child(odd){
+      background-color: #282C31 !important;
+    }
+  }
+.subscreens {
+  border: 1px solid #8F8399 !important;
+  color: #928999 !important;
+    tr:nth-child(even){
+      background-color: #232026 !important;
+    }
+    tr:nth-child(odd){
+      background-color: #2E2932 !important;
+    }
+  }
+.components {
+  border: 1px solid #A5A48C !important;
+  color: #A5A493 !important;
+    tr:nth-child(even){
+      background-color: #383830 !important;
+    }
+    tr:nth-child(odd){
+      background-color: #4B4A3C !important;
+    }
+  }
 
-
+.visited-table_caption{
+  background-color: #000000;
+  color: #898F98;
+  text-align: center !important;
+}
