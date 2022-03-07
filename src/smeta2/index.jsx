@@ -19,24 +19,6 @@ export default () => {
     }
 
     const [content, setContent] = useState(extractData(fullClone(jsonData)));
-
-
-    //////////////////////////CONSOLE//////////////////////////
-    /// TODO: path: "src/smeta2/index.jsx" line "54", time: "22:16:8:273"'
-    if (process && process.env.MODE_ENV !== 'production') {
-        const clr1 = 'color: #747678';
-        const clr = 'color: #72b8f5';
-        console.group('%c path: "src/smeta2/index.jsx", line: "54", time: "22:16:8:273"', clr1);
-        console.info('%c jsonData: ', clr, (jsonData));
-        console.info('%c content: ', clr, (content));
-        // console.info('%c JSON,parseObject(jsonData): ', clr, JSON.stringify(jsonData) );
-        //console.info('this: ', this );
-        //console.table( this );
-        console.groupEnd();
-    }
-    ////////////////////////END CONSOLE////////////////////////
-
-
     const hours = Math.round(sum);
     const hoursToOne = Math.round(sum / 3);
     const daysToOne = Math.round(hoursToOne / 8);
@@ -44,32 +26,7 @@ export default () => {
     let keyIndex = 0;
 
     function onClick(e, contentNode) {
-
-        /*const childs = e.currentTarget.parentNode.childNodes;
-        for (let i = 1; i < childs.length; i++) {
-            if( !childs[i].style.display || childs[i].style.display === 'initial'){
-                childs[i].style.display = 'none';
-            } else {
-                childs[i].style.display = 'initial';
-            }
-
-
-        }*/
-        // e.target.style.display = 'none';
         contentNode.expand = !contentNode.expand;
-        //////////////////////////CONSOLE//////////////////////////
-        /// TODO: path: "src/smeta2/index.jsx" line "61", time: "22:52:44:536"'
-        if( process && process.env.MODE_ENV !== 'production' ){
-            const clr1 = 'color: #747678';
-            const clr = 'color: #72b8f5';
-            console.group( '%c path: "src/smeta2/index.jsx", line: "61", time: "22:52:44:536"', clr1);
-            console.info('%c content: ', clr, content );
-            console.info('%c contentNode: ', clr, contentNode );
-            //console.info('this: ', this );
-            //console.table( this );
-            console.groupEnd();
-        }
-        ////////////////////////END CONSOLE////////////////////////
         setContent(fullClone( content ));
     }
 

@@ -60,23 +60,23 @@
 
 }
 .stories {
-  border: 1px solid #1F2423;
-  color: #879894;
+  border: 1px solid #B67F42 !important;
+  color: #B68E61 ;
+    tr:nth-child(even){
+      background-color: #52391E !important;
+    }
+    tr:nth-child(odd){
+      background-color: #6D4210 !important;
+    }
+  }
+.screens {
+  border: 1px solid #191d1c !important;
+  color: #82918d !important;
     tr:nth-child(even){
       background-color: #0D201B !important;
     }
     tr:nth-child(odd){
       background-color: #27312E !important;
-    }
-  }
-.screens {
-  border: 1px solid #A59B8C !important;
-  color: #A59E93 !important;
-    tr:nth-child(even){
-      background-color: #383530 !important;
-    }
-    tr:nth-child(odd){
-      background-color: #4B453C !important;
     }
   }
 .jobs {
@@ -100,13 +100,13 @@
     }
   }
 .components {
-  border: 1px solid #A5A48C !important;
-  color: #A5A493 !important;
+  border: 1px solid #A35555 !important;
+  color: #A36A6A !important;
     tr:nth-child(even){
-      background-color: #383830 !important;
+      background-color: #351C1C !important;
     }
     tr:nth-child(odd){
-      background-color: #4B4A3C !important;
+      background-color: #471A1A !important;
     }
   }
 
