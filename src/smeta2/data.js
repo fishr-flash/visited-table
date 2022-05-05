@@ -21,7 +21,7 @@ export default
                     "subscreens": [
                         {
                             "name": "Редактирование Территориального Банка",
-                            "components": [
+                            "parts": [
                                 {
                                     "name": "Карточка пользователя",
                                     "jobs": [
@@ -60,7 +60,7 @@ export default
                 },
                 {
                     "name": "Мои здания ( Визор ТБ )",
-                    "components": [
+                    "parts": [
                         {
                             "name": "Область фильтров",
                             "jobs": [
@@ -80,10 +80,10 @@ export default
                         },
                         {
                             "name": "Контент",
-                            "components": [
+                            "parts": [
                                 {
                                     "name": "Блок карточек города",
-                                    "components": [
+                                    "parts": [
                                         {
                                             "name": "Карточка здания",
                                             "jobs": [
@@ -137,7 +137,7 @@ export default
                             "subscreens": [
                                 {
                                     "name": "Модальное окно добавления/удаления",
-                                    "components": [
+                                    "parts": [
                                         {
                                             "name": "Карточка пользователя",
                                             "jobs": [
@@ -177,7 +177,7 @@ export default
                 },
                 {
                     "name": "Мои сервисы (Администратор здания)",
-                    "components": [
+                    "parts": [
                         {
                             "name": "Блок фильтрации",
                             "jobs": [
@@ -193,10 +193,10 @@ export default
                         },
                         {
                             "name": "Контент",
-                            "components": [
+                            "parts": [
                                 {
                                     "name": "Блок карточек сервисов",
-                                    "components": [
+                                    "parts": [
                                         {
                                             "name": "Карточка сервиса",
                                             "jobs": [
@@ -263,7 +263,7 @@ export default
             "screens": [
                 {
                     "name": "Редактирование и Добавление нового",
-                    "components": [
+                    "parts": [
                         {
                             "name": "Общая информация",
                             "jobs": [
@@ -279,7 +279,7 @@ export default
                         },
                         {
                             "name": "Режим работы",
-                            "components": [
+                            "parts": [
                                 {
                                     "name": "Дни недели",
                                     "jobs": [
@@ -295,10 +295,10 @@ export default
                                 },
                                 {
                                     "name": "Список режимов",
-                                    "components": [
+                                    "parts": [
                                         {
                                             "name": "Карточка режима",
-                                            "components": [
+                                            "parts": [
                                                 {
                                                     "name": "Модальное окно добавления перерыва",
                                                     "jobs": [
@@ -406,6 +406,23 @@ export default
                         }
                     ]
                 },
+            ]
+        },
+        {
+            "name":"SOFSERV-1 Я как Администратор, хочу создавать сервис бронирования",
+            "screens":[
+                {
+                    "name":"Сервис",
+                    "parts":[
+                        {
+                            "name":"QR-code",
+                            "jobs":{
+
+                            }
+                        }
+                    ]
+                },
+
             ]
         }
     ]
