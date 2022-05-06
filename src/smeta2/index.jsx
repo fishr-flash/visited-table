@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from "react";
-import jsonData from './data';
+import jsonData from './data_2';
 import {calculateTimes} from "./utils";
 import {fullClone} from "../utils";
 import './style.scss';
@@ -15,8 +15,9 @@ export default () => {
     sum = calculateTimes(jsonData, RATIO);
 
     const [content, setContent] = useState(fullClone(jsonData));
+    const countDevelopers = 1;
     const hours = Math.round(sum);
-    const hoursToOne = Math.round(sum / 3);
+    const hoursToOne = Math.round(sum / countDevelopers);
     const daysToOne = Math.round(hoursToOne / 8);
 
     let keyIndex = 0;
@@ -56,8 +57,8 @@ export default () => {
                                     >
                                         <thead key={`thead${key}${keyIndex}`}>
                                         <tr>
-                                            <th className={'visited-table__placeholder-th'}></th>
-                                            <th className={'visited-table__placeholder-td'}></th>
+                                            <th className={'visited-table__placeholder-th'}> </th>
+                                            <th className={'visited-table__placeholder-td'}> </th>
                                         </tr>
                                         <tr key={`trr${key}${keyIndex}`}>
                                             <th className={'visited-table_caption'} colSpan={2}>{key}</th>

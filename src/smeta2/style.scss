@@ -89,7 +89,7 @@
     }
   }
 
-.subscreens, .modals{
+.subscreens {
   border: 1px solid #8F8399 !important;
   color: #928999 !important;
     tr:nth-child(even){
@@ -99,7 +99,8 @@
       background-color: #2E2932 !important;
     }
   }
-.components, .parts{
+
+.parts {
   border: 1px solid #A35555 !important;
   color: #A36A6A !important;
     tr:nth-child(even){
@@ -108,12 +109,34 @@
     tr:nth-child(odd){
       background-color: #471A1A !important;
     }
+}
+
+.components {
+  border: 1px solid #194819 !important;
+  color: #7c654f;
+  tr:nth-child(even){
+    background-color: #016E01 !important;
   }
+  tr:nth-child(odd){
+    background-color: #003900 !important;
+  }
+}
 
 .visited-table_caption{
   background-color: #000000;
   color: #898F98;
   text-align: center !important;
+}
+
+.modals {
+  border: 1px solid #8F8399 !important;
+  color: #928999 !important;
+  tr:nth-child(even){
+    background-color: #232026 !important;
+  }
+  tr:nth-child(odd){
+    background-color: #2E2932 !important;
+  }
 }
 
 .jobs {
