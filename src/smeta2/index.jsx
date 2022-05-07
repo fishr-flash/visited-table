@@ -24,7 +24,7 @@ export default () => {
 
     function onClick(e, contentNode) {
         contentNode.expand = !contentNode.expand;
-        setContent(fullClone( content ));
+        setContent(fullClone(content));
     }
 
     function rowsGroup(content) {
@@ -36,15 +36,15 @@ export default () => {
                         return Array.isArray(item) && content.expand ?
                             <tr key={`tr1${key}${keyIndex}`}>
                                 <td colSpan={2} key={`rd${key}${keyIndex}`}>
-                                    {(()=>{
+                                    {(() => {
                                         //////////////////////////CONSOLE//////////////////////////
                                         /// TODO: path: "src/smeta2/index.jsx" line "40", time: "0:10:2:999"'
-                                        if( process && process.env.MODE_ENV !== 'production' ){
+                                        if (process && process.env.MODE_ENV !== 'production') {
                                             const clr1 = 'color: #747678';
                                             const clr = 'color: #72b8f5';
-                                            console.group( '%c path: "src/smeta2/index.jsx", line: "40", time: "0:10:2:999"', clr1);
-                                            console.info('%c key: ', clr, key );
-                                            console.info('%c keyIndex: ', clr, keyIndex );
+                                            console.group('%c path: "src/smeta2/index.jsx", line: "40", time: "0:10:2:999"', clr1);
+                                            console.info('%c key: ', clr, key);
+                                            console.info('%c keyIndex: ', clr, keyIndex);
                                             //console.info('this: ', this );
                                             //console.table( this );
                                             console.groupEnd();
@@ -57,8 +57,8 @@ export default () => {
                                     >
                                         <thead key={`thead${key}${keyIndex}`}>
                                         <tr>
-                                            <th className={'visited-table__placeholder-th'}> </th>
-                                            <th className={'visited-table__placeholder-td'}> </th>
+                                            <th className={'visited-table__placeholder-th'}></th>
+                                            <th className={'visited-table__placeholder-td'}></th>
                                         </tr>
                                         <tr key={`trr${key}${keyIndex}`}>
                                             <th className={'visited-table_caption'} colSpan={2}>{key}</th>
@@ -79,8 +79,11 @@ export default () => {
                                     onClick={(e) => onClick(e, content)}
                                     key={`tr3${key}${keyIndex}`}
                                     className={'visited-table'}>
-                                    <th style={{width: '90%'}} >{content.name}</th>
-                                    <td style={{width: '10%', textAlign: 'center'}}>{content.subTotal ? `~${content.subTotal}` : content.hours}</td>
+                                    <th style={{width: '90%'}}>{content.name}</th>
+                                    <td style={{
+                                        width: '10%',
+                                        textAlign: 'center'
+                                    }}>{content.subTotal ? `~${content.subTotal}` : content.hours}</td>
                                 </tr>
                             ) : null;
                     }
@@ -91,17 +94,31 @@ export default () => {
 
     return (
         <Fragment>
-            <div>{`All time: ${hours} hr`}</div>
-            <div>{`Time to one employee: ${hoursToOne} hr`}</div>
-            <div>{`Days to one employee: ${daysToOne} d`}</div>
+            <div style={{display: "flex", justifyContent: "space-between"}}>
+                <div>
+                    <div>{`All time: ${hours} hr`}</div>
+                    <div>{`Time to one employee: ${hoursToOne} hr`}</div>
+                    <div>{`Days to one employee: ${daysToOne} d`}</div>
+                </div>
+                <div className={'remark'}>
+                    <p>Без учета:</p>
+                    <br />
+                    <lu>
+                        <li>Реализации ролевой модели</li>
+                        <li>Взаимодействия с бэкендом</li>
+                        <li>Периодов проведения ИФТ и ПСИ</li>
+                    </lu>
+                </div>
+            </div>
+
             <div className={'wrapper'}>
                 <table className={'visited-table'} rules={'rows'} border={'1'}>
                     <caption>Оценка объема чел/часов</caption>
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th style={{width: '10%', textAlign: 'center'}}>Время</th>
-                        </tr>
+                    <tr>
+                        <th>Наименование</th>
+                        <th style={{width: '10%', textAlign: 'center'}}>Время</th>
+                    </tr>
                     </thead>
                     <tbody>
                     {content && rowsGroup(content)}
