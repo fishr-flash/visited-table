@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     "name": "Сторис",
     "stories": [
@@ -30,10 +31,12 @@ export default {
                             "components": [
                                 {
                                     "name": "Местоположение",
-                                    "jobs": [{
-                                        "name": "функциональность ( подстановка местоположения )",
-                                        "duration": 1
-                                    }]
+                                    "jobs": [
+                                        {
+                                            "name": "функциональность ( подстановка местоположения )",
+                                            "duration": 1
+                                        }
+                                    ]
                                 },
                                 {
                                     "name": "Описание",
@@ -91,11 +94,11 @@ export default {
                                 {
                                     "name": "Верстка, функциональность, API ( mocks )",
                                     "duration": 3
-                                },
+                                }
                             ]
-                        },
+                        }
                     ],
-                    "jobs":[
+                    "jobs": [
                         {
                             "name": "Функциональность",
                             "duration": 12
@@ -105,10 +108,8 @@ export default {
                             "duration": 12
                         }
                     ]
-                },
-
-            ],
-
+                }
+            ]
         },
         {
             "name": "SOFSERV-3 Я как Администратор, хочу иметь возможность просматривать шаблоны",
@@ -151,7 +152,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Переиспользование эл-та Категории занятий",
-                                    "duration": 3,
+                                    "duration": 3
                                 }
                             ]
                         },
@@ -160,10 +161,10 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Переиспользование эл-та Категории занятий",
-                                    "duration": 2,
+                                    "duration": 2
                                 }
                             ]
-                        },
+                        }
                     ],
                     "subscreens": [
                         {
@@ -196,7 +197,6 @@ export default {
                                                 {
                                                     "name": "Верстка",
                                                     "duration": 2
-
                                                 },
                                                 {
                                                     "name": "Функциональность",
@@ -239,7 +239,6 @@ export default {
                                         {
                                             "name": "Верстка и функциональность",
                                             "duration": 2
-
                                         }
                                     ]
                                 },
@@ -260,7 +259,6 @@ export default {
                                             "duration": 2
                                         }
                                     ]
-
                                 },
                                 {
                                     "name": "Привязки (переиспользование )",
@@ -270,7 +268,6 @@ export default {
                                             "duration": 1
                                         }
                                     ]
-
                                 },
                                 {
                                     "name": "Удаление",
@@ -293,8 +290,7 @@ export default {
                                             ]
                                         }
                                     ]
-
-                                },
+                                }
                             ],
                             "modals": [
                                 {
@@ -319,7 +315,7 @@ export default {
                             "parts": [
                                 {
                                     "name": "Общая информация",
-                                    "jobs":[
+                                    "jobs": [
                                         {
                                             "name": "Верстка",
                                             "duration": 1
@@ -343,7 +339,6 @@ export default {
                                             "duration": 2
                                         }
                                     ]
-
                                 },
                                 {
                                     "name": "Привязки (переиспользование )",
@@ -353,14 +348,13 @@ export default {
                                             "duration": 1
                                         }
                                     ]
-
                                 },
                                 {
                                     "name": "Заблокировать комнату",
-                                    "modals":[
+                                    "modals": [
                                         {
                                             "name": "Блокировка команты",
-                                            "jobs":[
+                                            "jobs": [
                                                 {
                                                     "name": "Верстка",
                                                     "duration": 3
@@ -372,19 +366,17 @@ export default {
                                                 {
                                                     "name": "API (mocks )",
                                                     "duration": 2
-
                                                 }
                                             ]
-
                                         }
                                     ]
                                 },
                                 {
                                     "name": "Удалить комнату",
-                                    "modals":[
+                                    "modals": [
                                         {
                                             "name": "Удаление команты",
-                                            "jobs":[
+                                            "jobs": [
                                                 {
                                                     "name": "Верстка",
                                                     "duration": 2
@@ -396,10 +388,8 @@ export default {
                                                 {
                                                     "name": "API (mocks )",
                                                     "duration": 1
-
                                                 }
                                             ]
-
                                         }
                                     ]
                                 }
@@ -415,7 +405,7 @@ export default {
                                     ]
                                 }
                             ],
-                            "jobs":[
+                            "jobs": [
                                 {
                                     "name": "API (mocks)",
                                     "duration": 8
@@ -443,7 +433,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    "name": "Общая информация ( сюда входят и Название и Общие правила )" ,
+                                    "name": "Общая информация ( сюда входят и Название и Общие правила )",
                                     "jobs": [
                                         {
                                             "name": "Верстка",
@@ -457,7 +447,7 @@ export default {
                                 },
                                 {
                                     "name": "Ссылка на online-ресурс",
-                                    "jobs":[
+                                    "jobs": [
                                         {
                                             "name": "Верстка и функциональность",
                                             "duration": 1
@@ -472,7 +462,6 @@ export default {
                                             "duration": 1
                                         }
                                     ]
-
                                 },
                                 {
                                     "name": "Удаление",
@@ -495,8 +484,7 @@ export default {
                                             ]
                                         }
                                     ]
-
-                                },
+                                }
                             ],
                             "modals": [
                                 {
@@ -507,9 +495,9 @@ export default {
                                             "duration": 1
                                         }
                                     ]
-                                },
+                                }
                             ],
-                            "jobs":[
+                            "jobs": [
                                 {
                                     "name": "API (mocks)",
                                     "duration": 8
@@ -517,7 +505,7 @@ export default {
                             ]
                         }
                     ],
-                    "jobs":[
+                    "jobs": [
                         {
                             "name": "Функциональность",
                             "duration": 12
@@ -527,16 +515,15 @@ export default {
                             "duration": 12
                         }
                     ]
-                },
-
+                }
             ]
         },
         {
             "name": "SOFSERV-27 Я как Администратор хочу иметь возможность управлять календарем событий",
-            "screens":[
+            "screens": [
                 {
                     "name": "Сервис. Вкладка Календарь ( табличное представление )",
-                    "jobs":[
+                    "jobs": [
                         {
                             "name": "Верстка",
                             "duration": 6
@@ -551,7 +538,153 @@ export default {
                         }
                     ]
                 }
+            ],
+            "subscreens": [
+                {
+                    "name": "Создание события",
+                    "parts": [
+                        {
+                            "name": "Общая информация",
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Участники",
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Режим работы",
+                            "parts": [
+                                {
+                                    "name": "Период",
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 4
+                                        }
+                                    ]
+                                }
+                            ],
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 24
+                                },
+                                {
+                                    "name": "Функциональность",
+                                    "duration": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "jobs": [
+                        {
+                            "name": "API (mocks )",
+                            "duration": 24
+                        }
+                    ]
+                },
+                {
+                    "name": "Просмотр события",
+                    "parts": [
+                        {
+                            "name": "Общая информация ( включая все виджеты )",
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 10
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Участники (таблица)",
+                            "parts": [
+                                {
+                                    "name": "Фильтры",
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 2
+                                        },
+                                        {
+                                            "name": "Функциональность",
+                                            "duration": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Таблица",
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 6
+                                        },
+                                        {
+                                            "name": "Функциональность",
+                                            "duration": 8
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Добавление участника",
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 8
+                                        },
+                                        {
+                                            "name": "Функциональность",
+                                            "duration": 12
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "jobs": [
+                        {
+                            "name": "Верстка",
+                            "duration": 4
+                        },
+                        {
+                            "name": "Функциональность",
+                            "duration": 12
+                        },
+                        {
+                            "name": "API (mocks)",
+                            "duration": 24
+                        }
+                    ]
+                },
+                {
+                    "name": "Редактирование события",
+                    "jobs":[
+                        {
+                            "name": "Верстка ( переиспользование )",
+                            "duration": 6
+                        },
+                        {
+                            "name": "Функциональность",
+                            "duration": 12
+                        },
+                        {
+                            "name": "API (mocks)",
+                            "duration": 24
+
+                        }
+                    ]
+                }
             ]
-        }
+        },
+        {"name": "SOFSERV-44 Разработка экрана Запись (Клиент) /требуется утверждение шаблонов/"}
     ]
 }
