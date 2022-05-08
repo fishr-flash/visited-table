@@ -9,6 +9,7 @@
   border-collapse: collapse;
   border: 1px solid #636363;
   color: #898F98;
+  cursor: pointer;
 
   caption{
     margin-bottom: 20px;
@@ -112,13 +113,13 @@
 }
 
 .components {
-  border: 1px solid #194819 !important;
+  border: 1px solid #102d10 !important;
   color: #7c654f;
   tr:nth-child(even){
-    background-color: #016E01 !important;
+    background-color: #004100 !important;
   }
   tr:nth-child(odd){
-    background-color: #003900 !important;
+    background-color: #002c00 !important;
   }
 }
 
@@ -144,10 +145,13 @@
   color: #898F98 !important;
   tr:nth-child(even){
     background-color: #202225 !important;
+    cursor: auto;
   }
   tr:nth-child(odd){
     background-color: #282C31 !important;
+    cursor: auto;
   }
+
 }
 
 .styled {
@@ -180,5 +184,5 @@
 
 .remark {
   color: #c95252;
-  font-size: xx-small;
+  font-size: small;
 }

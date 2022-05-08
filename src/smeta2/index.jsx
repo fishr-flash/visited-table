@@ -19,6 +19,7 @@ export default () => {
     const hours = Math.round(sum);
     const hoursToOne = Math.round(sum / countDevelopers);
     const daysToOne = Math.round(hoursToOne / 8);
+    const monthsToOne = Number( hoursToOne / 8 / 24 ).toFixed( 1);
 
     let keyIndex = 0;
 
@@ -99,6 +100,7 @@ export default () => {
                     <div>{`All time: ${hours} hr`}</div>
                     <div>{`Time to one employee: ${hoursToOne} hr`}</div>
                     <div>{`Days to one employee: ${daysToOne} d`}</div>
+                    <div>{`Months to one employee: ${monthsToOne} m`}</div>
                 </div>
                 <div className={'remark'}>
                     <p>Без учета:</p>

@@ -663,6 +663,24 @@ export default {
                             "duration": 32
                         }
                     ]
+                },
+                {
+                    "name": "Редактирование события",
+                    "jobs":[
+                        {
+                            "name": "Верстка ( переиспользование )",
+                            "duration": 6
+                        },
+                        {
+                            "name": "Функциональность",
+                            "duration": 12
+                        },
+                        {
+                            "name": "API (mocks)",
+                            "duration": 32
+
+                        }
+                    ]
                 }
             ]
         }
