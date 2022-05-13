@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     "name": "Сторис",
     "stories": [
@@ -660,7 +661,7 @@ export default {
                         },
                         {
                             "name": "API (mocks)",
-                            "duration": 32
+                            "duration": 24
                         }
                     ]
                 },
@@ -677,12 +678,13 @@ export default {
                         },
                         {
                             "name": "API (mocks)",
-                            "duration": 32
+                            "duration": 24
 
                         }
                     ]
                 }
             ]
-        }
+        },
+        {"name": "SOFSERV-44 Разработка экрана Запись (Клиент) /требуется утверждение шаблонов/"}
     ]
 }
