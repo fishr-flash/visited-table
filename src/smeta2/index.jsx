@@ -37,21 +37,6 @@ export default () => {
                         return Array.isArray(item) && content.expand ?
                             <tr key={`tr1${key}${keyIndex}`}>
                                 <td colSpan={2} key={`rd${key}${keyIndex}`}>
-                                    {(() => {
-                                        //////////////////////////CONSOLE//////////////////////////
-                                        /// TODO: path: "src/smeta2/index.jsx" line "40", time: "0:10:2:999"'
-                                        if (process && process.env.MODE_ENV !== 'production') {
-                                            const clr1 = 'color: #747678';
-                                            const clr = 'color: #72b8f5';
-                                            console.group('%c path: "src/smeta2/index.jsx", line: "40", time: "0:10:2:999"', clr1);
-                                            console.info('%c key: ', clr, key);
-                                            console.info('%c keyIndex: ', clr, keyIndex);
-                                            //console.info('this: ', this );
-                                            //console.table( this );
-                                            console.groupEnd();
-                                        }
-                                        ////////////////////////END CONSOLE////////////////////////
-                                    })()}
                                     <table
                                         className={`visited-table ${key}`}
                                         key={`table1${key}${keyIndex}`}
