@@ -186,3 +186,32 @@
   color: #c95252;
   font-size: small;
 }
+
+li {
+  // display: inline;
+}
+
+a {
+   outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 35px;
+  text-align: center;
+  line-height: 1;
+  color: black;
+  border-radius: 7px;
+}
+
+a:link, a:visited, a:focus {
+  background: yellow;
+
+}
+
+a:hover {
+  background: orange;
+}
+
+a:active {
+  background: red;
+  color: white;
+}

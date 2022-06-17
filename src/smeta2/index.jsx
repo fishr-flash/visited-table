@@ -1,8 +1,11 @@
-import React, {Fragment, useState} from "react";
-import jsonData from './data_2';
+import React, {Fragment, useEffect, useState} from "react";
+import jsonDataShort from './data_3_short';
+import jsonDataLong from './data_3_long';
 import {calculateTimes} from "./utils";
 import {fullClone} from "../utils";
 import './style.scss';
+import RedComment from "./parts/red-comment";
+import RedComment3 from "./parts/red-comment-3";
 
 export const DEFAULT_EXPAND = false;
 export const RATIO = 2;
@@ -12,20 +15,39 @@ export default () => {
 
     let sum = 0;
 
-    sum = calculateTimes(jsonData, RATIO);
+    sum = calculateTimes(jsonDataShort, RATIO);
 
-    const [content, setContent] = useState(fullClone(jsonData));
+    const VERSIONS = {
+        LONG:'var1',
+        SHORT: 'var2'
+    }
+    const [content, setContent] = useState(fullClone(jsonDataShort));
     const countDevelopers = 1;
-    const hours = Math.round(sum);
-    const hoursToOne = Math.round(sum / countDevelopers);
-    const daysToOne = Math.round(hoursToOne / 8);
-    const monthsToOne = Number( hoursToOne / 8 / 24 ).toFixed( 1);
+    const [hours, setHours] = useState( Math.round(sum));
+    const [ hoursToOne, setHoursToOne ] = useState(Math.round(sum / countDevelopers) );
+    const [daysToOne, setDaysToOne ] = useState(Math.round(hoursToOne / 8) );
+    const [ monthsToOne, setMonthsToOne ] = useState( Number( hoursToOne / 8 / 24 ).toFixed( 1) );
 
     let keyIndex = 0;
 
     function onClick(e, contentNode) {
         contentNode.expand = !contentNode.expand;
         setContent(fullClone(content));
+    }
+
+    function onClickVersion(newLink) {
+        if( newLink === VERSIONS.LONG ){
+            sum = calculateTimes(jsonDataLong, RATIO);
+            setContent(fullClone(jsonDataLong));
+        } else {
+            sum = calculateTimes(jsonDataShort, RATIO);
+            setContent(fullClone(jsonDataShort));
+        }
+
+        setHours( Math.round(sum) );
+        setHoursToOne( Math.round(sum / countDevelopers) );
+        setDaysToOne( Math.round(sum / 8 / countDevelopers) );
+        setMonthsToOne( Number( sum / 8 / 24 / countDevelopers ).toFixed( 1) );
     }
 
     function rowsGroup(content) {
@@ -87,20 +109,21 @@ export default () => {
                     <div>{`Days to one employee: ${daysToOne} d`}</div>
                     <div>{`Months to one employee: ${monthsToOne} m`}</div>
                 </div>
-                <div className={'remark'}>
-                    <p>Без учета:</p>
-                    <br />
-                    <lu>
-                        <li>Реализации ролевой модели</li>
-                        <li>Взаимодействия с бэкендом</li>
-                        <li>Периодов проведения ИФТ и ПСИ</li>
-                    </lu>
-                </div>
+                    <RedComment3 />
             </div>
 
             <div className={'wrapper'}>
+                <br />
+                <br />
                 <table className={'visited-table'} rules={'rows'} border={'1'}>
-                    <caption>Оценка объема чел/часов</caption>
+                    <caption>Оценка объема чел/часов &nbsp;
+                        <a href={'#'} onClick={(e)=>onClickVersion(e.target.text)} >
+                            {VERSIONS.LONG}
+                        </a> /
+                        <a href={'#'} onClick={(e)=>onClickVersion(e.target.text)} >
+                            {VERSIONS.SHORT}
+                        </a>
+                    </caption>
                     <thead>
                     <tr>
                         <th>Наименование</th>
