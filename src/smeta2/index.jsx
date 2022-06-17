@@ -18,8 +18,8 @@ export default () => {
     sum = calculateTimes(jsonDataShort, RATIO);
 
     const VERSIONS = {
-        LONG:'var1',
-        SHORT: 'var2'
+        LONG:'Custom Calendar',
+        SHORT: 'Plugin Calendar'
     }
     const [content, setContent] = useState(fullClone(jsonDataShort));
     const countDevelopers = 1;
@@ -116,7 +116,7 @@ export default () => {
                 <br />
                 <br />
                 <table className={'visited-table'} rules={'rows'} border={'1'}>
-                    <caption>Оценка объема чел/часов &nbsp;
+                    <caption>Преварительная оценка Сервис Бронирования &nbsp;
                         <a href={'#'} onClick={(e)=>onClickVersion(e.target.text)} >
                             {VERSIONS.LONG}
                         </a> /
