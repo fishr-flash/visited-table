@@ -1,10 +1,9 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useState} from "react";
 import jsonDataShort from './data_3_short';
 import jsonDataLong from './data_3_long';
 import {calculateTimes} from "./utils";
 import {fullClone} from "../utils";
 import './style.scss';
-import RedComment from "./parts/red-comment";
 import RedComment3 from "./parts/red-comment-3";
 
 export const DEFAULT_EXPAND = false;
@@ -116,7 +115,7 @@ export default () => {
                 <br />
                 <br />
                 <table className={'visited-table'} rules={'rows'} border={'1'}>
-                    <caption>Преварительная оценка Сервис Бронирования &nbsp;
+                    <caption>Преварительная оценка Сервис Бронирования{/**/} &nbsp;
                         <a href={'#'} onClick={(e)=>onClickVersion(e.target.text)} >
                             {VERSIONS.LONG}
                         </a> /
