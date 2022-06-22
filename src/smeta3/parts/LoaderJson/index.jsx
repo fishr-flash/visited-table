@@ -14,8 +14,7 @@ export default () => (
                 onClick={()=>window.open('file.doc')}>
                 Download!
             </button>
-            <a href={'#'} download onChange={(event)=>{
-            }}> download</a>
+            <a href={'#'} download onChange={()=> null}> download</a>
         </div>
         <div>
             <button className="favorite styled"

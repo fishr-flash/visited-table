@@ -1,6 +1,6 @@
 import {DEFAULT_EXPAND, RATIO} from "./index";
 
-export const parseArr = (arr, ratio) => {
+export const parseArr = (arr) => {
     let subTotal = 0;
     arr.forEach((v) => {
         subTotal += calculateTimes(v);

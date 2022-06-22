@@ -64,8 +64,8 @@ export default () => {
                                     >
                                         <thead key={`thead${key}${keyIndex}`}>
                                         <tr>
-                                            <th className={'visited-table__placeholder-th'}></th>
-                                            <th className={'visited-table__placeholder-td'}></th>
+                                            <th className={'visited-table__placeholder-th'}> </th>
+                                            <th className={'visited-table__placeholder-td'}> </th>
                                         </tr>
                                         <tr key={`trr${key}${keyIndex}`}>
                                             <th className={'visited-table_caption'} colSpan={2}>{key}</th>
