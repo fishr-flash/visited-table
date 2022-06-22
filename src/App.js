@@ -1,8 +1,5 @@
 import React from "react";
-import VisitedTable from "./visited-table";
-import Smeta2 from "./smeta2";
-import Smeta from "./smeta";
-import Example_button from "./example_button";
+import Smeta3 from "./smeta3";
 
 function App() {
 
@@ -10,7 +7,7 @@ function App() {
     <div key={'App'} className="App">
         {/*<VisitedTable />*/}
         {/*<Smeta />*/}
-        <Smeta2 />
+        <Smeta3 />
     </div>
   );
 }

@@ -1,12 +1,9 @@
 import {calculateTimes, parseArr} from "../utils";
-import data from "../data";
-import data_2 from "../data_2";
-import loaderJson from "../parts/LoaderJson";
 import LoaderJson from "../parts/LoaderJson";
 import {render, unmountComponentAtNode} from "react-dom";
 import {act} from "react-dom/test-utils";
 
-describe("smeta2", () => {
+describe("smeta3", () => {
     let container = null;
     beforeEach(() => {
         // подготавливаем DOM-элемент, куда будем рендерить
@@ -59,8 +56,6 @@ describe("smeta2", () => {
     })
 
     it('should data.js', function () {
-        const d2 = data_2;
-        const d = data;
         LoaderJson(null);
         const l = <LoaderJson />
         expect( l).toBe( l);
@@ -68,7 +63,7 @@ describe("smeta2", () => {
     });
 
     it('should  mount LoaderJson', function () {
-        const onChange = jest.fn();
+        jest.fn();
         // eslint-disable-next-line testing-library/no-unnecessary-act
         act(() =>{
             render(<LoaderJson props={null} />, container);

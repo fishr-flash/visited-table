@@ -1,6 +1,6 @@
 
 import {fullClone} from "../utils";
-import Smeta2 from "../smeta2";
+import Smeta2 from "../smeta3";
 import Smeta from "../smeta";
 import React from "react";
 
