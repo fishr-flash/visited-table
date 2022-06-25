@@ -1,6 +1,0 @@
-GET http://hotmail.com/api/item?id=99
-Accept: application/json
-
-###
-### example request
-GET http://yandex.ru

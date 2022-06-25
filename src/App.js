@@ -1,13 +1,11 @@
 import React from "react";
-import Smeta3 from "./smeta3";
+import Smeta2 from "./smeta2";
 
 function App() {
 
   return (
     <div key={'App'} className="App">
-        {/*<VisitedTable />*/}
-        {/*<Smeta />*/}
-        <Smeta3 />
+        <Smeta2 />
     </div>
   );
 }
