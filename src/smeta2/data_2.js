@@ -3,11 +3,352 @@ export default {
     "name": "Сторис",
     "stories": [
         {
+            "name": "Главный экран ( серия начальных экранов )",
+            "screens": [
+
+                {
+                    "name": "Супервизор",
+                    "jobs": [
+                        {
+                            "name": "API (mocks)",
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
+                        }
+                    ],
+                    "subscreens": [
+                        {
+                            "name": "Редактирование Территориального Банка",
+                            "parts": [
+                                {
+                                    "name": "Карточка пользователя",
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 0
+                                        },
+                                        {
+                                            "name": "Функциональность",
+                                            "duration": 1
+                                        }
+                                    ]
+                                }
+                            ],
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name": "Функциональность",
+                                    "duration":1
+                                },
+                                {
+                                    "name": "API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API",
+                                    "duration": 6
+                                }
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    "name": "Мои здания ( Визор ТБ )",
+                    "parts": [
+                        {
+                            "name": "Область фильтров",
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name": "Функциональность",
+                                    "duration": 2
+                                },
+                                {
+                                    "name": "Сигнализация",
+                                    "duration": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Контент",
+                            "parts": [
+                                {
+                                    "name": "Блок карточек города",
+                                    "parts": [
+                                        {
+                                            "name": "Карточка здания",
+                                            "jobs": [
+                                                {
+                                                    "name": "Верстка",
+                                                    "duration": 0
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 0
+                                        }
+                                    ]
+                                }
+                            ]
+
+                        }
+
+                    ],
+                    "jobs": [
+                        {
+                            "name": "Верстка",
+                            "duration": 0
+                        },
+                        {
+                            "name": "Функциональность",
+                            "duration": 3
+                        },
+                        {
+                            "name": "API (mocks)",
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
+                        }
+                    ],
+                    "subscreens": [
+                        {
+                            "name": "Редактирование здания",
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 0
+                                }
+
+                            ],
+                            "subscreens": [
+                                {
+                                    "name": "Модальное окно добавления/удаления",
+                                    "parts": [
+                                        {
+                                            "name": "Карточка пользователя",
+                                            "jobs": [
+                                                {
+                                                    "name": "Верстка",
+                                                    "duration": 0
+                                                },
+                                                {
+                                                    "name": "Функциональность",
+                                                    "duration": 1
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 0
+                                        },
+                                        {
+                                            "name": "Функциональность",
+                                            "duration":1
+                                        },
+                                        {
+                                            "name": "API (mocks)",
+                                            "duration": 1
+                                        },
+                                        {
+                                            "name": "API",
+                                            "duration": 6
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Мои сервисы (Администратор здания)",
+                    "parts": [
+                        {
+                            "name": "Блок фильтрации",
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name": "Функциональность",
+                                    "duration": 1
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Контент",
+                            "parts": [
+                                {
+                                    "name": "Блок карточек сервисов",
+                                    "parts": [
+                                        {
+                                            "name": "Карточка сервиса",
+                                            "jobs": [
+                                                {
+                                                    "name": "Верстка",
+                                                    "duration": 0
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "jobs": [
+                                        {
+                                            "name": "Верстка",
+                                            "duration": 0
+                                        }
+                                    ]
+                                }
+                            ],
+                            "jobs": [
+                                {
+                                    "name": "Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name": "Функциональность",
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API",
+                                    "duration": 6
+                                }
+                            ]
+                        }
+                    ],
+                    "jobs": [
+                        {
+                            "name": "Верстка",
+                            "duration": 0
+                        },
+                        {
+                            "name": "Функциональность",
+                            "duration": 1
+                        },
+                        {
+                            "name": "API (mocks)",
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
+                        }
+                    ]
+
+                }
+
+            ]
+        },
+        {
             "name": "SOFSERV-1 Я как Администратор, хочу создавать сервис бронирования",
             "screens": [
                 {
                     "name": "Сервис",
                     "parts": [
+                        {
+                            "name":"Общая информация",
+                            "components":[
+                                {
+                                    "name":"Местоположение",
+                                    "jobs":[{
+                                        "name":"функциональность ( подстановка местоположения )",
+                                        "duration": 1
+                                    }]
+                                },
+                                {
+                                    "name":"Описание",
+                                    "jobs":[
+                                        {
+                                            "name":"Заменить на компонент с учетом кол-ва знаков",
+                                            "duration":1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Тип сервиса",
+                            "jobs":[
+                                {
+                                    "name":"Верстка и функциональность",
+                                    "duration": 0
+                                },
+                                {
+                                    "name":"API",
+                                    "duration": 6
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Правила",
+                            "jobs":[
+                                {
+                                    "name":"Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name":"API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name":"API",
+                                    "duration": 6
+                                }
+                            ]
+                        },
+                        {
+                            "name":"QR-код",
+                            "jobs":[
+                                {
+                                    "name":"Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name":"API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name":"API",
+                                    "duration": 6
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Документы для согласования (переиспользование )",
+                            "jobs":[
+                                {
+                                    "name":"Верстка",
+                                    "duration": 0
+                                },
+                                {
+                                    "name":"API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name":"API",
+                                    "duration": 6
+                                }
+                            ]
+                        },
                         {
                             "name": "Удаление сервиса",
                             "modals": [
@@ -681,7 +1022,7 @@ export default {
                                 },
                                 {
                                     "name": "API",
-                                    "duration": 20
+                                    "duration": 6
                                 },
                                 {
                                     "name": "AIP mock",

@@ -12,6 +12,10 @@ export default
                         {
                             "name": "API (mocks)",
                             "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ],
                     "subscreens": [
@@ -39,11 +43,15 @@ export default
                                 },
                                 {
                                     "name": "Функциональность",
-                                    "duration":3
+                                    "duration":1
                                 },
                                 {
-                                    "name": "API (mocks) (получение, запись)",
-                                    "duration": 2
+                                    "name": "API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API",
+                                    "duration": 6
                                 }
                             ]
                         }
@@ -110,6 +118,10 @@ export default
                         {
                             "name": "API (mocks)",
                             "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ],
                     "subscreens": [
@@ -147,11 +159,15 @@ export default
                                         },
                                         {
                                             "name": "Функциональность",
-                                            "duration":3
+                                            "duration":1
                                         },
                                         {
                                             "name": "API (mocks)",
-                                            "duration": 2
+                                            "duration": 1
+                                        },
+                                        {
+                                            "name": "API",
+                                            "duration": 6
                                         }
                                     ]
                                 }
@@ -206,11 +222,15 @@ export default
                                 },
                                 {
                                     "name": "Функциональность",
-                                    "duration": 3
+                                    "duration": 1
                                 },
                                 {
                                     "name": "API (mocks)",
                                     "duration": 1
+                                },
+                                {
+                                    "name": "API",
+                                    "duration": 6
                                 }
                             ]
                         }
@@ -222,11 +242,15 @@ export default
                         },
                         {
                             "name": "Функциональность",
-                            "duration": 3
+                            "duration": 1
                         },
                         {
                             "name": "API (mocks)",
-                            "duration": 2
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ]
 
@@ -281,7 +305,7 @@ export default
                                                         {
                                                             "name": "Функциональность",
                                                             "comment": "Нужно ли контролировать перекрытие диапазонов времени? Возможно ли это",
-                                                            "duration": 2
+                                                            "duration": 1
 
                                                         },
                                                     ]
@@ -323,7 +347,7 @@ export default
                             ]
                         },
                         {
-                            "name": "Ответственные",
+                            "name": "Ответственные (Переиспользование)",
                             "duration": 1,
                             "comment": "Переиспользуемый компонент"
                         },
@@ -336,7 +360,7 @@ export default
                                 },
                                 {
                                     "name": "Функциональность",
-                                    "duration": 5
+                                    "duration": 1
                                 },
                             ]
                         }
@@ -344,11 +368,15 @@ export default
                     "jobs": [
                         {
                             "name": "Функциональность",
-                            "duration": 4
+                            "duration": 1
                         },
                         {
                             "name": "API (mocks)",
-                            "duration": 3
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ]
                 },
@@ -390,7 +418,7 @@ export default
                               },
                               {
                                   "name":"API",
-                                  "duration": 1
+                                  "duration": 6
                               }
                           ]
                         },
@@ -402,8 +430,12 @@ export default
                                     "duration": 0
                                 },
                                 {
+                                    "name":"API (mocks)",
+                                    "duration": 1
+                                },
+                                {
                                     "name":"API",
-                                    "duration": 2
+                                    "duration": 6
                                 }
                             ]
                         },
@@ -415,8 +447,12 @@ export default
                                     "duration": 0
                                 },
                                 {
+                                    "name":"API (mocks)",
+                                    "duration": 1
+                                },
+                                {
                                     "name":"API",
-                                    "duration": 2
+                                    "duration": 6
                                 }
                             ]
                         },
@@ -424,9 +460,17 @@ export default
                             "name":"Документы для согласования (переиспользование )",
                             "jobs":[
                                 {
-                                    "name":"Верстка, функциональность, API",
+                                    "name":"Верстка",
                                     "duration": 0
                                 },
+                                {
+                                    "name":"API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name":"API",
+                                    "duration": 6
+                                }
                             ]
                         },
                     ]

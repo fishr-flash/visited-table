@@ -10,7 +10,7 @@ export const RATIO = 2;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
 
-    let sum = 0;
+    let sum=0;
 
     sum = calculateTimes(jsonData, RATIO);
 
@@ -91,8 +91,7 @@ export default () => {
                     <p>Без учета:</p>
                     <br />
                     <lu>
-                        <li>Реализации ролевой модели</li>
-                        <li>Взаимодействия с бэкендом</li>
+                        <li>Взаимодействия с мидл слоем</li>
                         <li>Периодов проведения ИФТ и ПСИ</li>
                     </lu>
                 </div>
