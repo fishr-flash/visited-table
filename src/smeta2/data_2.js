@@ -15,97 +15,26 @@ export default {
                                     "name": "Окно удаления",
                                     "jobs": [
                                         {
-                                            "name": "Верстка",
-                                            "duration": 3
-                                        },
-                                        {
-                                            "name": "Функциональност и API",
-                                            "duration": 1
+                                            "name": "API",
+                                            "duration": 6
                                         }
                                     ]
                                 }
                             ]
                         },
-                        {
-                            "name": "Общая информация",
-                            "components": [
-                                {
-                                    "name": "Местоположение",
-                                    "jobs": [
-                                        {
-                                            "name": "функциональность ( подстановка местоположения )",
-                                            "duration": 1
-                                        }
-                                    ]
-                                },
-                                {
-                                    "name": "Описание",
-                                    "jobs": [
-                                        {
-                                            "name": "Заменить на компонент с учетом кол-ва знаков",
-                                            "duration": 1
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Тип сервиса",
-                            "jobs": [
-                                {
-                                    "name": "Верстка и функциональность",
-                                    "duration": 1
-                                },
-                                {
-                                    "name": "API ( mocks )",
-                                    "duration": 1
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Правила (простые поля )",
-                            "jobs": [
-                                {
-                                    "name": "Верстка",
-                                    "duration": 2
-                                },
-                                {
-                                    "name": "API ( mocks )",
-                                    "duration": 2
-                                }
-                            ]
-                        },
-                        {
-                            "name": "QR-код",
-                            "jobs": [
-                                {
-                                    "name": "Верстка",
-                                    "duration": 2
-                                },
-                                {
-                                    "name": "API ( mocks )",
-                                    "duration": 2
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Документы для согласования (переиспользование )",
-                            "jobs": [
-                                {
-                                    "name": "Верстка, функциональность, API ( mocks )",
-                                    "duration": 3
-                                }
-                            ]
-                        }
                     ],
                     "jobs": [
                         {
                             "name": "Функциональность",
-                            "duration": 12
+                            "duration": 6
                         },
                         {
                             "name": "API (mocks )",
-                            "duration": 12
+                            "duration": 1
+                        },
+                        {
+                            "name":"API",
+                            "duration": 6,
                         }
                     ]
                 }
@@ -121,16 +50,16 @@ export default {
                             "name": "Шаблоны событий",
                             "jobs": [
                                 {
-                                    "name": "Верстка",
-                                    "duration": 4
-                                },
-                                {
                                     "name": "Функциональность (переход к редактированию )",
                                     "duration": 1
                                 },
                                 {
                                     "name": "API ( mocks )",
-                                    "duration": 3
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API",
+                                    "duration": 6
                                 }
                             ]
                         },
@@ -138,12 +67,8 @@ export default {
                             "name": "Категории занятий",
                             "jobs": [
                                 {
-                                    "name": "Верстка",
-                                    "duration": 4
-                                },
-                                {
                                     "name": "Функциональность",
-                                    "duration": 3
+                                    "duration": 1
                                 }
                             ]
                         },
@@ -152,7 +77,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Переиспользование эл-та Категории занятий",
-                                    "duration": 3
+                                    "duration": 0
                                 }
                             ]
                         },
@@ -161,7 +86,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Переиспользование эл-та Категории занятий",
-                                    "duration": 2
+                                    "duration": 0
                                 }
                             ]
                         }
@@ -175,7 +100,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 3
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -184,7 +109,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -195,16 +120,16 @@ export default {
                                             "name": "Удаление с привязкой",
                                             "jobs": [
                                                 {
-                                                    "name": "Верстка",
-                                                    "duration": 2
-                                                },
-                                                {
                                                     "name": "Функциональность",
                                                     "duration": 1
                                                 },
                                                 {
                                                     "name": "API (mocks )",
-                                                    "duration": 3
+                                                    "duration": 1
+                                                },
+                                                {
+                                                    "name": "API",
+                                                    "duration": 6
                                                 }
                                             ]
                                         },
@@ -214,6 +139,10 @@ export default {
                                                 {
                                                     "name": "Верстка, Функциональность, API mocks",
                                                     "duration": 1
+                                                },
+                                                {
+                                                    "name":"API",
+                                                    "duration": 6
                                                 }
                                             ]
                                         }
@@ -229,7 +158,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -238,7 +167,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка и функциональность",
-                                            "duration": 2
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -247,7 +176,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -256,7 +185,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -265,7 +194,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -277,7 +206,7 @@ export default {
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 2
+                                                    "duration": 0
                                                 },
                                                 {
                                                     "name": "Функциональность",
@@ -285,7 +214,11 @@ export default {
                                                 },
                                                 {
                                                     "name": "API (mocks )",
-                                                    "duration": 3
+                                                    "duration": 1
+                                                },
+                                                {
+                                                    "name": "API",
+                                                    "duration": 6
                                                 }
                                             ]
                                         }
@@ -298,7 +231,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка и функциональность",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -306,6 +239,10 @@ export default {
                             "jobs": [
                                 {
                                     "name": "API (mocks)",
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API",
                                     "duration": 6
                                 }
                             ]
@@ -318,7 +255,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -327,7 +264,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -336,7 +273,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -345,7 +282,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -357,15 +294,19 @@ export default {
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 3
+                                                    "duration": 0
                                                 },
                                                 {
                                                     "name": "Функциональность",
-                                                    "duration": 6
+                                                    "duration": 2
                                                 },
                                                 {
                                                     "name": "API (mocks )",
-                                                    "duration": 2
+                                                    "duration": 1
+                                                },
+                                                {
+                                                    "name": "API",
+                                                    "duration": 6
                                                 }
                                             ]
                                         }
@@ -379,7 +320,7 @@ export default {
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 2
+                                                    "duration": 0
                                                 },
                                                 {
                                                     "name": "Функциональность",
@@ -388,6 +329,10 @@ export default {
                                                 {
                                                     "name": "API (mocks )",
                                                     "duration": 1
+                                                },
+                                                {
+                                                    "name": "API (mocks )",
+                                                    "duration": 6
                                                 }
                                             ]
                                         }
@@ -400,7 +345,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка и функциональность",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -408,7 +353,11 @@ export default {
                             "jobs": [
                                 {
                                     "name": "API (mocks)",
-                                    "duration": 8
+                                    "duration": 1
+                                },
+                                {
+                                    "name": "API",
+                                    "duration": 6
                                 }
                             ]
                         },
@@ -420,15 +369,19 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         },
                                         {
                                             "name": "Функциональность",
-                                            "duration": 2
+                                            "duration": 1
                                         },
                                         {
                                             "name": "API (mocks )",
-                                            "duration": 4
+                                            "duration": 1
+                                        },
+                                        {
+                                            "name": "API",
+                                            "duration": 6
                                         }
                                     ]
                                 },
@@ -437,11 +390,11 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 3
+                                            "duration": 0
                                         },
                                         {
                                             "name": "Функциональность",
-                                            "duration": 2
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -450,7 +403,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка и функциональность",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -459,7 +412,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 },
@@ -471,7 +424,7 @@ export default {
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 2
+                                                    "duration": 0
                                                 },
                                                 {
                                                     "name": "Функциональность",
@@ -479,7 +432,11 @@ export default {
                                                 },
                                                 {
                                                     "name": "API (mocks )",
-                                                    "duration": 3
+                                                    "duration": 1
+                                                },
+                                                {
+                                                    "name": "API",
+                                                    "duration": 6
                                                 }
                                             ]
                                         }
@@ -492,7 +449,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка и функциональность",
-                                            "duration": 1
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -500,7 +457,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "API (mocks)",
-                                    "duration": 8
+                                    "duration": 1
                                 }
                             ]
                         }
@@ -508,11 +465,15 @@ export default {
                     "jobs": [
                         {
                             "name": "Функциональность",
-                            "duration": 12
+                            "duration": 4
                         },
                         {
                             "name": "API (mocks )",
-                            "duration": 12
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ]
                 }
@@ -526,15 +487,19 @@ export default {
                     "jobs": [
                         {
                             "name": "Верстка",
-                            "duration": 6
+                            "duration": 0
                         },
                         {
                             "name": "Функциональность",
-                            "duration": 8
+                            "duration": 2
                         },
                         {
                             "name": "API (mocks )",
-                            "duration": 5
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ]
                 }
@@ -548,7 +513,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 1
+                                    "duration": 0
                                 }
                             ]
                         },
@@ -557,7 +522,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 1
+                                    "duration": 0
                                 }
                             ]
                         },
@@ -569,7 +534,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 4
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -577,11 +542,11 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 24
+                                    "duration": 0
                                 },
                                 {
                                     "name": "Функциональность",
-                                    "duration": 32
+                                    "duration": 12
                                 }
                             ]
                         }
@@ -589,7 +554,11 @@ export default {
                     "jobs": [
                         {
                             "name": "API (mocks )",
-                            "duration": 24
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ]
                 },
@@ -601,7 +570,7 @@ export default {
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 10
+                                    "duration": 0
                                 }
                             ]
                         },
@@ -613,7 +582,7 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         },
                                         {
                                             "name": "Функциональность",
@@ -626,11 +595,11 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 6
+                                            "duration": 0
                                         },
                                         {
                                             "name": "Функциональность",
-                                            "duration": 8
+                                            "duration": 2
                                         }
                                     ]
                                 },
@@ -639,11 +608,11 @@ export default {
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 8
+                                            "duration": 0
                                         },
                                         {
                                             "name": "Функциональность",
-                                            "duration": 12
+                                            "duration": 4
                                         }
                                     ]
                                 }
@@ -653,15 +622,19 @@ export default {
                     "jobs": [
                         {
                             "name": "Верстка",
-                            "duration": 4
+                            "duration": 0
                         },
                         {
                             "name": "Функциональность",
-                            "duration": 12
+                            "duration": 4
                         },
                         {
                             "name": "API (mocks)",
-                            "duration": 24
+                            "duration": 1
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
                         }
                     ]
                 },
@@ -670,15 +643,20 @@ export default {
                     "jobs":[
                         {
                             "name": "Верстка ( переиспользование )",
-                            "duration": 6
+                            "duration": 0
                         },
                         {
                             "name": "Функциональность",
-                            "duration": 12
+                            "duration": 4
                         },
                         {
                             "name": "API (mocks)",
-                            "duration": 24
+                            "duration": 1
+
+                        },
+                        {
+                            "name": "API",
+                            "duration": 6
 
                         }
                     ]

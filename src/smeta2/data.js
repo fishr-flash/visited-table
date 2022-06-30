@@ -10,11 +10,7 @@ export default
                     "name": "Супервизор",
                     "jobs": [
                         {
-                            "name": "Нормализация данных",
-                            "duration": 3
-                        },
-                        {
-                            "name": "Эмуляция mock-данных",
+                            "name": "API (mocks)",
                             "duration": 1
                         }
                     ],
@@ -27,10 +23,10 @@ export default
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 0.5
+                                            "duration": 0
                                         },
                                         {
-                                            "name": "Поведение",
+                                            "name": "Функциональность",
                                             "duration": 1
                                         }
                                     ]
@@ -39,18 +35,14 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 2
+                                    "duration": 0
                                 },
                                 {
-                                    "name": "Поеведение",
+                                    "name": "Функциональность",
                                     "duration":3
                                 },
                                 {
-                                    "name": "Нормализация данных",
-                                    "duration": 1
-                                },
-                                {
-                                    "name": "Эмуляция mock-данных (получение, запись)",
+                                    "name": "API (mocks) (получение, запись)",
                                     "duration": 2
                                 }
                             ]
@@ -66,10 +58,10 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 3
+                                    "duration": 0
                                 },
                                 {
-                                    "name": "Поведение",
+                                    "name": "Функциональность",
                                     "duration": 2
                                 },
                                 {
@@ -89,7 +81,7 @@ export default
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 3
+                                                    "duration": 0
                                                 }
                                             ]
                                         }
@@ -97,7 +89,7 @@ export default
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 0.5
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -109,18 +101,14 @@ export default
                     "jobs": [
                         {
                             "name": "Верстка",
-                            "duration": 0.5
+                            "duration": 0
                         },
                         {
-                            "name": "Нормализация данных",
+                            "name": "Функциональность",
                             "duration": 3
                         },
                         {
-                            "name": "Поведение",
-                            "duration": 3
-                        },
-                        {
-                            "name": "Эмуляция mock-данных",
+                            "name": "API (mocks)",
                             "duration": 1
                         }
                     ],
@@ -130,7 +118,7 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 3
+                                    "duration": 0
                                 }
 
                             ],
@@ -143,10 +131,10 @@ export default
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 0.5
+                                                    "duration": 0
                                                 },
                                                 {
-                                                    "name": "Поведение",
+                                                    "name": "Функциональность",
                                                     "duration": 1
                                                 }
                                             ]
@@ -155,18 +143,14 @@ export default
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 2
+                                            "duration": 0
                                         },
                                         {
-                                            "name": "Поеведение",
+                                            "name": "Функциональность",
                                             "duration":3
                                         },
                                         {
-                                            "name": "Нормализация данных",
-                                            "duration": 1
-                                        },
-                                        {
-                                            "name": "Эмуляция mock-данных (получение, запись)",
+                                            "name": "API (mocks)",
                                             "duration": 2
                                         }
                                     ]
@@ -183,10 +167,10 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 1
+                                    "duration": 0
                                 },
                                 {
-                                    "name": "Поведение",
+                                    "name": "Функциональность",
                                     "duration": 1
                                 }
                             ]
@@ -202,7 +186,7 @@ export default
                                             "jobs": [
                                                 {
                                                     "name": "Верстка",
-                                                    "duration": 3
+                                                    "duration": 0
                                                 }
                                             ]
                                         }
@@ -210,7 +194,7 @@ export default
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 0.5
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -218,18 +202,14 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 0.5
+                                    "duration": 0
                                 },
                                 {
-                                    "name": "Нормализация данных",
+                                    "name": "Функциональность",
                                     "duration": 3
                                 },
                                 {
-                                    "name": "Поведение",
-                                    "duration": 3
-                                },
-                                {
-                                    "name": "Эмуляция mock-данных",
+                                    "name": "API (mocks)",
                                     "duration": 1
                                 }
                             ]
@@ -238,18 +218,14 @@ export default
                     "jobs": [
                         {
                             "name": "Верстка",
-                            "duration": 1
+                            "duration": 0
                         },
                         {
-                            "name": "Поведение",
+                            "name": "Функциональность",
                             "duration": 3
                         },
                         {
-                            "name": "Нормализация данных",
-                            "duration": 4
-                        },
-                        {
-                            "name": "Эмуляция mock-данных",
+                            "name": "API (mocks)",
                             "duration": 2
                         }
                     ]
@@ -269,12 +245,8 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 5
+                                    "duration": 0
                                 },
-                                {
-                                    "name": "Нормализация данных",
-                                    "duration": 1
-                                }
                             ]
                         },
                         {
@@ -285,10 +257,10 @@ export default
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 3
+                                            "duration": 0
                                         },
                                         {
-                                            "name": "Поведение",
+                                            "name": "Функциональность",
                                             "duration": 1
                                         }
                                     ]
@@ -304,32 +276,22 @@ export default
                                                     "jobs": [
                                                         {
                                                             "name": "Верстка",
-                                                            "duration": 3
+                                                            "duration": 0
                                                         },
                                                         {
-                                                            "name": "Поведение",
+                                                            "name": "Функциональность",
                                                             "comment": "Нужно ли контролировать перекрытие диапазонов времени? Возможно ли это",
                                                             "duration": 2
 
                                                         },
-                                                        {
-                                                            "name": "Нормализация данных",
-                                                            "duration": 2
-                                                        }
-
-
                                                     ]
                                                 }
                                             ],
                                             "jobs": [
                                                 {
                                                     "name":"Верстка",
-                                                    "duration": 6
+                                                    "duration": 0
                                                 },
-                                                {
-                                                    "name": "Нормализация данных",
-                                                    "duration": 4
-                                                }
                                             ]
                                         }
                                     ]
@@ -339,7 +301,7 @@ export default
                                     "jobs": [
                                         {
                                             "name": "Верстка",
-                                            "duration": 0.5
+                                            "duration": 0
                                         }
                                     ]
                                 }
@@ -347,12 +309,8 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 2
+                                    "duration": 0
                                 },
-                                {
-                                    "name": "Нормализация данных",
-                                    "duration": 4
-                                }
                             ]
                         },
                         {
@@ -360,12 +318,8 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 4
+                                    "duration": 0
                                 },
-                                {
-                                    "name": "Нормализация данных",
-                                    "duration": 2
-                                }
                             ]
                         },
                         {
@@ -378,30 +332,22 @@ export default
                             "jobs": [
                                 {
                                     "name": "Верстка",
-                                    "duration": 3
+                                    "duration": 0
                                 },
                                 {
-                                    "name": "Поведение",
+                                    "name": "Функциональность",
                                     "duration": 5
                                 },
-                                {
-                                    "name": "Нормализация данных",
-                                    "duration": 1
-                                }
                             ]
                         }
                     ],
                     "jobs": [
                         {
-                            "name": "Поведение",
+                            "name": "Функциональность",
                             "duration": 4
                         },
                         {
-                            "name": "Нормализация данных",
-                            "duration": 6
-                        },
-                        {
-                            "name": "Эмуляция mock-данных",
+                            "name": "API (mocks)",
                             "duration": 3
                         }
                     ]
@@ -440,7 +386,7 @@ export default
                           "jobs":[
                               {
                                   "name":"Верстка и функциональность",
-                                  "duration": 1
+                                  "duration": 0
                               },
                               {
                                   "name":"API",
@@ -453,7 +399,7 @@ export default
                             "jobs":[
                                 {
                                     "name":"Верстка",
-                                    "duration": 2
+                                    "duration": 0
                                 },
                                 {
                                     "name":"API",
@@ -466,7 +412,7 @@ export default
                             "jobs":[
                                 {
                                     "name":"Верстка",
-                                    "duration": 2
+                                    "duration": 0
                                 },
                                 {
                                     "name":"API",
@@ -479,7 +425,7 @@ export default
                             "jobs":[
                                 {
                                     "name":"Верстка, функциональность, API",
-                                    "duration": 3
+                                    "duration": 0
                                 },
                             ]
                         },
